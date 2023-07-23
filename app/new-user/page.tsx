@@ -9,8 +9,8 @@ const createNewUser = async () => {
         where: {
             clerkId: user.id as string,
         }
-    });
-    console.log(match)
+    })
+
     if (!match) {
         await prisma.user.create({
             data: {
